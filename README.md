@@ -11,8 +11,8 @@ Dapr brings unique advantages to agent implementation:
 - **Workflow Orchestration**: Durable, reliable execution of complex agent tasks
 - **Pub/Sub Messaging**: Event-driven communication between agent components
 - **State Management**: Built-in persistence with pluggable state stores
-- **LLM Abstraction**: Reliably and observable interactions with LLMs
 - **Platform Agnostic**: Runs locally or on any cloud platform
+- **LLM Abstraction**: Enables reliable, observable interactions with LLMs and allows swapping LLM providers without code changes
 
 ## Prerequisites
 
@@ -189,7 +189,7 @@ The key components of this implementation are:
 
 The Prompt Chaining pattern decomposes a complex task into a sequence of steps, where each LLM call processes the output of the previous one. This pattern allows for breaking down complex tasks into simpler, more manageable steps with validation gates between them.
 
-![Prompt Chaining Pattern](images/03_chaining.webp)
+![Prompt Chaining Pattern](images/03_chaining.png)
 
 ### Use Cases
 
@@ -249,7 +249,7 @@ This pattern is ideal when:
 
 The Routing pattern classifies an input and directs it to a specialized followup task. This pattern enables separation of concerns, allowing each specialized handler to focus on a specific type of input without the complexity of handling all possible cases.
 
-![Routing Pattern](images/04_routing.webp)
+![Routing Pattern](images/04_routing.png)
 
 ### Use Cases
 
@@ -308,7 +308,7 @@ This pattern is ideal when:
 
 The Parallelization pattern allows LLMs to work simultaneously on different aspects of a task, with outputs aggregated programmatically. 
 
-![Parallelization Pattern](images/05_parallelization.webp)
+![Parallelization Pattern](images/05_parallelization.png)
 
 ### Use Cases
 
@@ -362,7 +362,7 @@ This pattern is ideal when:
 
 The Orchestrator-Workers pattern features a central orchestrator LLM that dynamically breaks down tasks, delegates them to worker LLMs, and synthesizes their results.
 
-![Orchestrator-Workers Pattern](images/06_orchestrator.webp)
+![Orchestrator-Workers Pattern](images/06_orchestrator.png)
 
 ### Use Cases
 
@@ -423,7 +423,7 @@ Unlike the parallelization pattern where subtasks are predefined, the orchestrat
 
 The Evaluator-Optimizer pattern features two complementary LLM roles in a feedback loop: one generates content while another evaluates it, leading to iterative improvements until quality criteria are met.
 
-![Evaluator-Optimizer Pattern](images/07_evaluator.webp)
+![Evaluator-Optimizer Pattern](images/07_evaluator.png)
 
 ### Use Cases
 
