@@ -249,7 +249,7 @@ This pattern is ideal when:
 
 The Routing pattern classifies an input and directs it to a specialized followup task. This pattern enables separation of concerns, allowing each specialized handler to focus on a specific type of input without the complexity of handling all possible cases.
 
-![Routing Pattern](images/05_routing.webp)
+![Routing Pattern](images/04_routing.webp)
 
 ### Use Cases
 
@@ -308,7 +308,7 @@ This pattern is ideal when:
 
 The Parallelization pattern allows LLMs to work simultaneously on different aspects of a task, with outputs aggregated programmatically. 
 
-![Parallelization Pattern](images/04_parallelization.webp)
+![Parallelization Pattern](images/05_parallelization.webp)
 
 ### Use Cases
 
