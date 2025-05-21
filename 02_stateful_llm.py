@@ -6,12 +6,12 @@ Stateful Augmented LLM Pattern demonstrates:
 3. LLM abstraction
 4. Durable execution of tools as workflow actions
 """
-
 import asyncio
 import logging
 from typing import List
 from pydantic import BaseModel, Field
 from dapr_agents import tool, AssistantAgent
+from dapr_agents.memory import ConversationDaprStateMemory
 from dotenv import load_dotenv
 
 # Define tool output model
@@ -49,8 +49,11 @@ async def main():
             message_bus_name="messagepubsub",
             state_store_name="workflowstatestore",
             state_key="workflow_state",
-            agents_registry_store_name="workflowstatestore",
+            agents_registry_store_name="registrystatestore",
             agents_registry_key="agents_registry",
+            memory=ConversationDaprStateMemory(
+                store_name="conversationstore", session_id="my-unique-id"
+            )
         )
 
         travel_planner.as_service(port=8001)

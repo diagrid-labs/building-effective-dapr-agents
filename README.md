@@ -1,8 +1,6 @@
 # Building Effective Dapr Agents
 
-This repository demonstrates implementations of agent patterns based on Anthropic's research paper [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents). The paper emphasizes that successful agent implementations use simple, composable patterns rather than complex frameworks.
-
-These examples showcase how to implement these patterns using the [Dapr Agents framework](https://dapr.github.io/dapr-agents/), which provides a clean workflow approach to building agent systems.
+These examples showcase how to implement Anthropic's research paper [Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) using the [Dapr Agents framework](https://dapr.github.io/dapr-agents/). For more details, see this complementary [blog post](https://www.diagrid.io/blog/building-effective-dapr-agents).
 
 ## Why Dapr for Agents?
 

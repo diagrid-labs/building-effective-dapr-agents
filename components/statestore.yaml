@@ -1,7 +1,7 @@
 apiVersion: dapr.io/v1alpha1
 kind: Component
 metadata:
-  name: agenticworkflowstate
+  name: registrystatestore
 spec:
   type: state.redis
   version: v1

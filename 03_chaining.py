@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 Prompt Chaining Pattern demonstrates:
-1. Agent-based tasks with tools
+1. Simple prompt-based tasks
 2. Agent-based tasks without tools
-3. Simple prompt-based tasks
+3. Agent-based tasks with tools
 4. Chaining tasks sequentially using durable workflow steps
 """
 
